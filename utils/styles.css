@@ -1,0 +1,269 @@
+:root {
+    --white: white;
+    --light-green: #aad01d;
+    --light-blue: #54b8c6;
+    --gray: #4b595a;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'sofia-pro', 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: var(--light-blue);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--white);
+    text-align: left;
+}
+
+nav {
+    text-align: right;
+}
+
+nav a,
+nav button {
+    padding: 10px 15px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: normal;
+}
+    
+nav button {
+    border: none;
+    background-color: var(--light-blue);
+}
+
+nav a:hover,
+nav button {
+    color: var(--white);
+}
+
+a {
+    color: var(--light-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #93b419;
+}
+
+h2 {
+    font-family: 'sofia-pro-condensed', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: .5px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {    
+    font-size: 18px;
+}
+
+p {
+    line-height: 1.3em;
+    padding: 10px 0px;
+}
+
+.hero {
+    background-image: url('./images/Pine Forest at Sunrise.jpg');
+    background-size: cover;
+    background-position: 50%;
+    padding: 150px 0 40px 0;
+    position: relative;
+    z-index: -1;
+}
+
+.container {
+    margin: auto;
+    width: 1200px;
+} 
+
+.blue-text {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--light-blue);
+}
+
+/* Group Sidebar */
+
+.group-main {
+    background-color: var(--gray);
+    color: var(--white);
+    padding: 30px;
+    height: 200px;
+}
+
+.group-header {
+    padding: 20px 20px 0px 20px;
+    background-color: var(--gray);
+    border-radius: 5px 5px 0px 0px;
+}
+
+.group-id {
+    background-color: #384243;
+    padding: 20px;
+    color: var(--white);
+    font-family: 'sofia-pro-condensed', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 0px 0px 5px 5px;
+}
+
+
+/* Top Section */
+
+.top-section {
+    background-color: var(--white);
+    padding: 30px 60px 40px 40px;
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+}
+
+.location,
+.dates {
+    flex: 1;
+    text-align: center;
+}
+
+
+/* Itinerary and To Do List */
+
+.itinerary-header,
+.to-do-header {
+    background-color: var(--light-green);
+    padding: 20px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.itinerary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.to-do-add-header,
+.itinerary-add-comment-header {
+    background-color: var(--gray);
+    padding: 20px;
+}
+
+.itinerary-section,
+.to-do-section {
+    border-radius: 5px;
+    background-color: white;
+}
+
+.itinerary-main,
+.to-do-add-main,
+.itinerary-comments,
+.itinerary-add-comment-main {
+    padding: 30px;
+}
+
+.itinerary-item,
+.itinerary-add-comment,
+.comments {
+    padding-bottom: 30px;
+}
+
+ul li {
+    list-style: none;
+    font-weight: bold;
+    padding: 30px;
+    border-bottom: #c6c6c6 solid 1px;
+}
+
+/* Flex Styles */
+.flex-main,
+.flex-sub {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.flex-main {
+    margin-top: -80px;
+}
+
+.flex-sub {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.left-side {
+    flex: 1;
+}
+
+.right-side {
+    flex: 4;
+}
+
+.itinerary-section {
+    flex: 2;
+}
+
+.to-do-section {
+    flex: 1;
+}
+
+/* Form Styles */
+.itinerary-item h4 {
+    padding-bottom: 10px;
+}
+
+textarea,
+input,
+select {
+    width: 100%;
+    border: none;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Button Styles */
+button {
+    background-color: var(--light-blue);
+    padding: 10px 20px;
+    border: none;
+    color: white;
+}
+
+nav a:hover,
+button:hover {
+    background-color: #4aa6b3;
+    cursor: pointer;
+}
+
+.plus img {
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+.plus img:hover {
+    transform: rotate(90deg);
+}
