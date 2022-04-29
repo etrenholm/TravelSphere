@@ -5,6 +5,12 @@ class Group extends Model {}
 
 Group.init(
     {
+        // id: {
+        //     type: DataTypes.UUID,
+        //     allowNull: false,
+        //     primaryKey: true,
+        //     defaultValue: DataTypes.UUIDV4
+        // },
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,

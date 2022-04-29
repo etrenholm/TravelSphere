@@ -1,5 +1,5 @@
 const groupSeeds = require('./group-seeds');
-const userSeeds = require('./user-seeds');
+const memberSeeds = require('./member-seeds');
 const postSeeds = require('./post-seeds');
 const commentSeeds = require('./comment-seeds');
 const listItemSeeds = require('./listItem-seeds')
@@ -13,7 +13,7 @@ const createSeeds = async () => {
     await groupSeeds();
     console.log('--------------');
 
-    await userSeeds();
+    await memberSeeds();
     console.log('--------------');
   
     await postSeeds();

@@ -17,20 +17,21 @@ ListItem.init(
                 len: [1]
             }
         },
-        user_id: {
+        member_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'user',
+                model: 'member',
                 key: 'id'
             }
         }
     },
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'list_item'
+        modelName: 'listitem'
     }
 )
 
