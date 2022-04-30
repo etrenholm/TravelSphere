@@ -228,6 +228,7 @@ ul li {
 .flex-sub {
     margin-top: 20px;
     margin-bottom: 100px;
+    align-items: flex-start;
 }
 
 .left-side {
@@ -244,6 +245,7 @@ ul li {
 
 .to-do-section {
     flex: 1;
+    padding-top: 0px;
 }
 
 /* Form Styles */
@@ -294,4 +296,75 @@ button:hover {
 .form-link {
     padding-left: 10px;
     font-weight: normal;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+
+@media screen and (max-width: 980px) {
+
+    .container {
+        width: 800px;
+    } 
+
+    .login-section,
+    .signup-section,
+    .trip-info-section {
+        width: 60%;
+        margin-top: -80px;
+    }
+
+    .top-section {
+        padding: 30px 60px 40px 0px;
+    } 
+
+}
+
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+
+@media screen and (max-width: 768px) { 
+
+    .container {
+        width: 700px;
+    }
+
+    .flex-sub {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .left-side {
+        width: 100%;
+    }
+
+    .to-do-section {
+        width: 100%;
+    }
+
+}
+
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+
+@media screen and (max-width: 575px) {
+
+    .login-section,
+    .signup-section,
+    .trip-info-section {
+        width: 90%;
+        margin-top: -80px;
+    }
+
+    .container {
+        width: 500px;
+    } 
+
+    .flex-main {
+        flex-direction: column;
+    }
+
+    .flex-sub {
+        flex-direction: column-reverse;
+    }
+
 }
