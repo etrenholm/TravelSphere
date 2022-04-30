@@ -145,8 +145,11 @@ p {
 }
 
 
-/* Itinerary and To Do List */
+/* Itinerary, To Do List, Signup, login, Trip Info */
 
+.login-header,
+.signup-header,
+.trip-info-header,
 .itinerary-header,
 .to-do-header {
     background-color: var(--light-green);
@@ -166,12 +169,25 @@ p {
     padding: 20px;
 }
 
+.login-section,
+.signup-section,
+.trip-info-section,
 .itinerary-section,
 .to-do-section {
     border-radius: 5px;
     background-color: white;
 }
 
+.login-section,
+.signup-section,
+.trip-info-section {
+    width: 50%;
+    margin-top: -80px;
+}
+
+.login-main,
+.signup-main,
+.trip-info-main,
 .itinerary-main,
 .to-do-add-main,
 .itinerary-comments,
@@ -179,6 +195,7 @@ p {
     padding: 30px;
 }
 
+.login-item,
 .itinerary-item,
 .itinerary-add-comment,
 .comments {
@@ -200,7 +217,8 @@ ul li {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 20px
+    gap: 20px;
+    justify-content: center;
 }
 
 .flex-main {
@@ -245,12 +263,17 @@ select {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#radio-button {
+    width: 5%;
+}
+
 /* Button Styles */
 button {
     background-color: var(--light-blue);
     padding: 10px 20px;
     border: none;
     color: white;
+    font-family: 'sofia-pro', 'Arial', sans-serif;
 }
 
 nav a:hover,
@@ -266,4 +289,9 @@ button:hover {
 
 .plus img:hover {
     transform: rotate(90deg);
+}
+
+.form-link {
+    padding-left: 10px;
+    font-weight: normal;
 }
