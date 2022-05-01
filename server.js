@@ -36,8 +36,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // connect routes
-// const routes = require('./controllers/');
-// app.use(routes);
+const routes = require('./controllers/');
+app.use(routes);
 
 // connection to db and server
 sequelize.sync({ force: true }).then(() => {

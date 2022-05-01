@@ -17,6 +17,14 @@ Comment.init(
                 len: [1]
             }
         },
+        group_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'group',
+                key: 'id'
+            }
+        },
         member_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
