@@ -1,3 +1,34 @@
+const router = require('express').Router();
+
 // GET login
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/')
+        return;
+    }
+    // RENDER to login.handlebars
+    res.render('login')
+});
 
 // GET signup
+router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/login')
+        return;
+    }
+    // RENDER to signup.handlebars
+    res.render('signup')
+});
+
+// GET trip info
+router.get('/trip-info', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/login')
+        return;
+    }
+    // RENDER to trip-info.handlebars
+    res.render('trip-info')
+});
+
+
+module.exports = router;

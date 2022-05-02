@@ -17,6 +17,14 @@ Comment.init(
                 len: [1]
             }
         },
+        trip_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'trip',
+                key: 'id'
+            }
+        },
         member_id: {
             type: DataTypes.INTEGER,
             allowNull: false,

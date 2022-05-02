@@ -1,20 +1,30 @@
-<h2>Signup</h2>
-<form class="login-form">
-  <div>
-    <label for="username-login">Username</label>
-    <input type="text" id="username-signup"/>
-  </div>
-  <div>
-    <label for="email-signup">Email</label>
-    <input type="text" id="email-signup"/>
-  </div>
-  <div>
-    <label for="password-signup">Password</label>
-    <input type="password" id="password-signup"/>
-  </div>
-  <div>
-    <button type="submit" id="submit">Signup!</button>
-  </div>
-</form>
+<div class="flex-sub">
+    <section class="signup-section"> 
+
+        <div class="signup-header">
+            <h2>Let's Get Started!</h2>
+        </div>
+
+        <div class="signup-main">
+            <form class="signup-form">
+                <label for="username-login">Username:</label><br>
+                <input type="text" id="username-login" name="username">
+
+                <label for="password-signup">Password:</label><br>
+                <input type="text" id="password-signup" name="password">
+
+                <label for="group-id-insert">Group ID:</label><br>
+                <input type="text" id="group-id" name="group-id">
+
+                <input type="radio" id="radio-button" name="need-id-confirm" value="need-id-confirm">
+                <label for="javascript">I don't have a Group ID, create one!</label><br>
+                
+                <button type="submit" id="signup-button" class="btn">Sign Up</button>
+                <a href="/login" class="form-link">Already have an account? Log in.</a>
+            </form>
+        </div>
+
+    </section>
+</div>
 
 <script src="/javascript/signup.js"></script>

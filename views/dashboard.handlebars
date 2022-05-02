@@ -1,31 +1,82 @@
+<div class="flex-main">
+    <div class="left-side">
 
-  <h2>Create New Post</h2>
-<section class="form-box">
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+        <section class="group-section">
+            <div class="group-header">
+                <h2>Group Members</h2>
+            </div>
+            <div class="group-main">
+                <p>Erica</p>
+                <p>Josh</p>
+                <p>Ryan</p>
+            </div>
+            <div class="group-id">
+                Group ID: {{id}}
+            </div>
+        </section>
+
     </div>
-    <div>
-      <label for="description">Content</label>
-      <input id="post-content" name="description" />
+
+    <div class="right-side">
+
+        <section class="top-section">
+            <div class="location">
+                <p class="blue-text">Your Trip to:</p>
+                <h3>{{location}}</h3>
+            </div>
+            <div class="dates">
+                <p class="blue-text">Travel Dates:</p> 
+                <h3>May 25 - June 1, 2022</h3>
+            </div>
+        </section>
+
+        <div class="flex-sub">
+
+            <section class="itinerary-section"> 
+
+                <div class="itinerary-header">
+                    <h2>Itinerary Ideas</h2>
+                    <div class="plus">
+                        <img src="images/plus.svg" width="20px">
+                    </div>
+                </div>
+
+                <!-- itinerary main START -->
+
+                <div class="itinerary-main">
+
+                    {{#each posts as |post|}}
+                    <div class="itinerary-item">
+                        {{> post-info post}}
+                    </div>
+                    {{/each}}
+
+                </div>   
+            </section>
+
+            <section class="to-do-section">
+                    <div class="to-do-header">
+                        <h2>To-Do List</h2>
+                    </div>
+                    <div class="to-do-main">
+                        <ul>
+                        {{#each listitems as |listitem|}}
+                            {{> list-info listitem}}
+                        {{/each}}
+                        </ul>
+                    </div>
+
+                <div class="to-do-add-header">
+                    <h2>Add an Item:</h2>
+                </div>
+                <div class="to-do-add-main">
+                    <form class="to-do">
+                        <input type="text" id="to-do-item" name="to-do-item">
+                        <button id="to-do-add-button" class="btn">Post</button>
+                    </form>
+                </div>
+            </section>
+
+        </div>
     </div>
-    <button type="submit" class="btn"><a href="/">Create</button>
-  </form>
-</section>
-
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
-
-<script src="/javascript/add-post.js"></script>
+</div>

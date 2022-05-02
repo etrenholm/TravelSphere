@@ -1,4 +1,4 @@
-const groupSeeds = require('./group-seeds');
+const tripSeeds = require('./trip-seeds');
 const memberSeeds = require('./member-seeds');
 const postSeeds = require('./post-seeds');
 const commentSeeds = require('./comment-seeds');
@@ -10,7 +10,7 @@ const createSeeds = async () => {
     await sequelize.sync({ force: true });
     console.log('--------------');
 
-    await groupSeeds();
+    await tripSeeds();
     console.log('--------------');
 
     await memberSeeds();

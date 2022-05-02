@@ -27,6 +27,14 @@ Post.init(
             type: DataTypes.STRING(1234),
             allowNull: false
         },
+        trip_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+              model: 'trip',
+              key: 'id'
+            }
+        },
         member_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -34,10 +42,11 @@ Post.init(
               model: 'member',
               key: 'id'
             }
-          }
+        }
     },
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'post'
