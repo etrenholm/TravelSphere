@@ -1,0 +1,20 @@
+<div class="flex-sub">
+
+    <section class="itinerary-view-section"> 
+
+        {{> post-info post}}
+
+        {{> comments post.comments}}
+        
+        <div class="itinerary-add-comment-header">
+            <h2>Add a Comment:</h2>
+        </div>
+        <div class="itinerary-add-comment-main">
+            <form class="comment-form">
+                <textarea type="text" id="itinerary-add-comment" name="itinerary-add-comment"></textarea>
+                <button id="itinerary-add-comment-button" class="btn">Post</button>
+            </form>
+        </div>
+
+    </section>
+</div>

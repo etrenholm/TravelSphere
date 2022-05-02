@@ -48,4 +48,22 @@ router.get('/', (req, res) => {
     })
 });
 
+// GET view post page
+router.get('/view', (req, res) => {
+
+    // RENDER to view-post.handlebars
+    res.render('view-post', {
+        loggedIn: true
+    })
+});
+
+// GET create post page
+router.get('/create', (req, res) => {
+
+    // RENDER to create-post.handlebars
+    res.render('create-post', {
+        loggedIn: true
+    })
+});
+
 module.exports = router;

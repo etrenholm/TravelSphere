@@ -78,10 +78,6 @@ h4 {
     font-size: 18px;
 }
 
-h4 a {    
-    color: black;
-}
-
 p {
     line-height: 1.3em;
     padding: 10px 0px;
@@ -177,6 +173,8 @@ p {
 .signup-section,
 .trip-info-section,
 .itinerary-section,
+.itinerary-add-section,
+.itinerary-view-section,
 .to-do-section {
     border-radius: 5px;
     background-color: white;
@@ -184,9 +182,17 @@ p {
 
 .login-section,
 .signup-section,
-.trip-info-section {
+.trip-info-section,
+.itinerary-add-section,
+.itinerary-view-section {
     width: 50%;
-    margin-top: -80px;
+    margin-top: -60px;
+}
+
+.itinerary-view-section
+{
+    width: 90%;
+    margin-top: -60px;
 }
 
 .login-main,

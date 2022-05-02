@@ -9,13 +9,20 @@
     </head>
 
     <header>
-        <a href="/"><img src="./images/pindrop.png" width="20px"></a>
+        {{#if loggedIn}}
+        <a href="/dashboard"><img src="../images/pindrop.png" width="20px"></a>
+        {{else}}
+        <a href="/"><img src="../images/pindrop.png" width="20px"></a>
+        {{/if}}
 
         <nav>
+            {{#if loggedIn}}
             <a href="/dashboard" class="nav-item">Dashboard</a>
             <button id="logout" class="nav-item logout">Logout</button>
+            {{else}}
             <a href="/login" class="nav-item">Login</a>
             <a href="/sign-up" class="nav-item">Sign up</a>
+            {{/if}}
         </nav>
     </header>
 
@@ -25,5 +32,10 @@
         <main class="container">
             {{{ body }}}
         </main>
+
+        {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+        {{/if}}
+
     </body>
 </html>
