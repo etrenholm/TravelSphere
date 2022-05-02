@@ -21,7 +21,7 @@ router.get('/signup', (req, res) => {
 });
 
 // GET trip info
-router.get('/signup', (req, res) => {
+router.get('/trip-info', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/login')
         return;

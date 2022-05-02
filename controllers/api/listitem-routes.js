@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     ListItem.create({
         item_text: req.body.item_text,
-        group_id: req.body.group_id,
+        trip_id: req.body.trip_id,
         member_id: req.body.member_id
         // member_id: req.session.member_id
     })

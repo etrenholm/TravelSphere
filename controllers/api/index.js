@@ -1,12 +1,12 @@
 const router = require('express').Router();
 
-const groupRoutes = require('./group-routes');
+const tripRoutes = require('./trip-routes');
 const memberRoutes = require('./member-routes');
 const postRoutes = require('./post-routes');
 const listItemRoutes = require('./listitem-routes');
 const commentRoutes = require('./comment-routes');
 
-router.use('/groups', groupRoutes);
+router.use('/trips', tripRoutes);
 router.use('/members', memberRoutes);
 router.use('/posts', postRoutes);
 router.use('/listitems', listItemRoutes);

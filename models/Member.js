@@ -25,11 +25,11 @@ Member.init(
                 len: [4]
             }
         },
-        group_id: {
+        trip_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'group',
+                model: 'trip',
                 key: 'id'
             }
         }

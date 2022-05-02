@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Group, Member, Post, Comment, ListItem } = require('../../models');
+const { Trip, Member, Post, Comment, ListItem } = require('../../models');
 
 // GET all members
 router.get('/', (req, res) => {
@@ -27,7 +27,7 @@ router.get('/:id', (req, res) => {
         },
         include: [
             {
-                model: Group,
+                model: Trip,
                 attributes: ['location','start_date', 'end_date']
             },
             {
@@ -61,13 +61,13 @@ router.post('/', (req, res) => {
     Member.create({
         username: req.body.username,
         password: req.body.password,
-        group_id: req.body.group_id
+        trip_id: req.body.trip_id
     })
     .then(memberData => {
         req.session.save(() => {
         req.session.user_id = memberData.id;
         req.session.username = memberData.username;
-        req.session.group_id = memberData.group_id;
+        req.session.trip_id = memberData.trip_id;
         req.session.loggedIn = true;
     
         res.json(memberData);
@@ -100,7 +100,7 @@ router.post('/login', (req, res) => {
         req.session.save(() => {
         req.session.member_id = memberData.id;
         req.session.username = memberData.username;
-        req.session.group_id = memberData.group_id;
+        req.session.trip_id = memberData.trip_id;
         req.session.loggedIn = true;
     
         res.json({ user: userData, message: 'You are now logged in!' });

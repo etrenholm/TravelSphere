@@ -27,11 +27,11 @@ Post.init(
             type: DataTypes.STRING(1234),
             allowNull: false
         },
-        group_id: {
+        trip_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-              model: 'group',
+              model: 'trip',
               key: 'id'
             }
         },

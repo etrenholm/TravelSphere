@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
     if (req.session) {
         Comment.create({
             comment_text: req.body.comment_text,
-            group_id: req.body.group_id,
+            trip_id: req.body.trip_id,
             post_id: req.body.post_id,
             member_id: req.body.member_id
             // member_id: req.session.member_id

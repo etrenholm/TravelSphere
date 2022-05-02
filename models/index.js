@@ -3,34 +3,34 @@ const ListItem = require('./ListItem');
 const Comment = require('./Comment');
 const Post = require('./Post');
 const Member = require('./Member');
-const Group = require('./Group');
+const Trip = require('./Trip');
 
 // create associations
 
-// Group
-Group.hasMany(Member, {
-    foreignKey: 'group_id',
+// Trip
+Trip.hasMany(Member, {
+    foreignKey: 'trip_id',
     onDelete: 'CASCADE'
 });
 
-Group.hasMany(Post, {
-    foreignKey: 'group_id',
+Trip.hasMany(Post, {
+    foreignKey: 'trip_id',
     onDelete: 'CASCADE'
 });
 
-Group.hasMany(Comment, {
-    foreignKey: 'group_id',
+Trip.hasMany(Comment, {
+    foreignKey: 'trip_id',
     onDelete: 'CASCADE'
 });
 
-Group.hasMany(ListItem, {
-    foreignKey: 'group_id',
+Trip.hasMany(ListItem, {
+    foreignKey: 'trip_id',
     onDelete: 'CASCADE'
 });
 
 // Member
-Member.belongsTo(Group, {
-    foreignKey: 'group_id'
+Member.belongsTo(Trip, {
+    foreignKey: 'trip_id'
 });
 
 Member.hasMany(Post, {
@@ -59,7 +59,7 @@ Post.hasMany(Comment, {
 });
 
 // Comments
-Comment.belongsTo(Group, {
+Comment.belongsTo(Trip, {
     foreignKey: 'member_id',
 });
   
@@ -77,7 +77,7 @@ ListItem.belongsTo(Member, {
 });
 
 module.exports = {
-    Group,
+    Trip,
     Member,
     Post,
     Comment,
