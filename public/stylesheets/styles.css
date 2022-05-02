@@ -63,6 +63,14 @@ a:hover {
     color: #93b419;
 }
 
+h1 {
+    font-family: 'sofia-pro-condensed', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: var(--white);
+    letter-spacing: .5px;
+    padding-bottom: 10px;
+}
+
 h2 {
     font-family: 'sofia-pro-condensed', 'Arial Narrow', Arial, sans-serif;
     font-size: 22px;
@@ -76,6 +84,13 @@ h3 {
 
 h4 {    
     font-size: 18px;
+}
+
+h5 {    
+    font-size: 22px;
+    text-align: center;
+    color: var(--white);
+    padding-bottom: 10px;
 }
 
 p {
@@ -144,9 +159,36 @@ p {
     text-align: center;
 }
 
+/* Homepage */
+
+.homepage-section {
+    width: 50%;
+    margin-top: -90px;
+}
+
+.homepage-header {
+    background-color: var(--light-green);
+    padding: 50px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 60px;
+}
+
+.homepage-btn {
+    width: 40%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #4b595a;
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.homepage-btn:hover {
+    background-color: #414d4e;
+}
 
 /* Itinerary, To Do List, Signup, login, Trip Info */
-
 .login-header,
 .signup-header,
 .trip-info-header,
