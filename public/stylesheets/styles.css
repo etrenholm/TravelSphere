@@ -66,10 +66,11 @@ a:hover {
 
 h1 {
     font-family: 'sofia-pro-condensed', 'Arial Narrow', Arial, sans-serif;
-    font-size: 40px;
+    font-size: 48px;
     color: var(--white);
     letter-spacing: .5px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
+    line-height: 1em;
 }
 
 h2 {
@@ -85,6 +86,10 @@ h3 {
 
 h4 {    
     font-size: 18px;
+}
+
+h4 a {    
+    color: black;
 }
 
 h5 {    
@@ -110,7 +115,7 @@ p {
 
 .container {
     margin: auto;
-    width: 1200px;
+    width: 1100px;
 } 
 
 .blue-text {
@@ -125,7 +130,6 @@ p {
     background-color: var(--gray);
     color: var(--white);
     padding: 30px;
-    height: 200px;
 }
 
 .group-header {
@@ -169,24 +173,16 @@ p {
 
 .homepage-header {
     background-color: var(--light-green);
-    padding: 50px;
+    padding: 50px 50px 70px 50px;
     border-radius: 5px;
     text-align: center;
     font-size: 60px;
 }
 
-.homepage-btn {
-    width: 40%;
-    margin: 10px;
-    padding: 20px;
-    background-color: #4b595a;
-    color: var(--white);
-    border-radius: 5px;
-    font-size: 15px;
-}
-
-.homepage-btn:hover {
-    background-color: #414d4e;
+.home-button-section {
+    justify-content: center;
+    margin-top: 30px;
+    color: black;
 }
 
 /* Itinerary, To Do List, Signup, login, Trip Info */
@@ -249,10 +245,13 @@ p {
 }
 
 .login-item,
-.itinerary-item,
 .itinerary-add-comment,
 .comments {
     padding-bottom: 30px;
+}
+
+.itinerary-item {
+    padding-bottom: 20px;
 }
 
 ul li {
@@ -390,8 +389,20 @@ button:hover {
         width: 100%;
     }
 
+    .right-side {
+        width: 100%;
+    }
+
+    .itinerary-section {
+        width: 100%;
+    }
+
     .to-do-section {
         width: 100%;
+    }
+
+    .homepage-section {
+        width: 70%;
     }
 
 }

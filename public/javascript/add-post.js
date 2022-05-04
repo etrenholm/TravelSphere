@@ -26,4 +26,4 @@ async function addPostFormHandler(event) {
   }
 }
 
-document.querySelector('.to-do').addEventListener('submit', addPostFormHandler);
+document.querySelector('.add-post').addEventListener('submit', addPostFormHandler);

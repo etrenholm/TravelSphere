@@ -10,9 +10,9 @@
 
     <header>
         {{#if loggedIn}}
-        <a href="/dashboard"><img src="../images/pindrop.png" width="20px"></a>
+        <a href="/dashboard"><img src="/images/pindrop.png" width="20px"></a>
         {{else}}
-        <a href="/"><img src="../images/pindrop.png" width="20px"></a>
+        <a href="/"><img src="/images/pindrop.png" width="20px"></a>
         {{/if}}
 
         <nav>
@@ -21,7 +21,7 @@
             <button id="logout" class="nav-item logout">Logout</button>
             {{else}}
             <a href="/login" class="nav-item">Login</a>
-            <a href="/sign-up" class="nav-item">Sign up</a>
+            <a href="/signup" class="nav-item">Sign up</a>
             {{/if}}
         </nav>
     </header>

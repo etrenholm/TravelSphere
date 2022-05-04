@@ -74,8 +74,8 @@ router.post('/', (req, res) => {
       title: req.body.title,
       url: req.body.url,
       post_content: req.body.post_content,
-      member_id: req.body.member_id
-      // member_id: req.session.member_id
+      trip_id: req.session.trip_id,
+      member_id: req.session.member_id
   })
   .then(postData => res.json(postData))
   .catch((err) => {

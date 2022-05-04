@@ -16,9 +16,8 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     ListItem.create({
         item_text: req.body.item_text,
-        trip_id: req.body.trip_id,
-        member_id: req.body.member_id
-        // member_id: req.session.member_id
+        trip_id: req.session.trip_id,
+        member_id: req.session.member_id
     })
     .then(listData => res.json(listData))
     .catch((err) => {

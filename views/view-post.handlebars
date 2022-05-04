@@ -1,11 +1,21 @@
 <div class="flex-sub">
 
-    <section class="itinerary-view-section"> 
+    <section class="itinerary-view-section">
 
-        {{> post-info post}}
+        <div class="itinerary-header">
+            <h2>Itinerary Idea</h2>
+        </div>
 
-        {{> comments post.comments}}
-        
+        <div class="itinerary-main">
+            <div class="itinerary-item">
+                <h4>{{posts.title}}</h4>
+                <p><a href="{{posts.url}}">{{posts.url}}</a></p>
+                <p>{{posts.post_content}}</p>
+            </div>
+        </div>
+
+        {{> comments posts.comments}}
+
         <div class="itinerary-add-comment-header">
             <h2>Add a Comment:</h2>
         </div>
@@ -18,3 +28,5 @@
 
     </section>
 </div>
+
+<script src="/javascript/comment.js"></script>

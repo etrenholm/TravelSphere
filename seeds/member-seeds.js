@@ -43,6 +43,7 @@ const memberdata = [
     }
 ]
 
-const memberSeeds = () => Member.bulkCreate(memberdata);
+// const memberSeeds = () => Member.bulkCreate(memberdata);
+const memberSeeds = () => Member.bulkCreate(memberdata, {individualHooks: true});
 
 module.exports = memberSeeds;
