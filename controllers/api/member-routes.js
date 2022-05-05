@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../../utils/auth');
 const { Trip, Member, Post, Comment, ListItem } = require('../../models');
 
 // GET all members
@@ -111,7 +112,7 @@ router.post('/login', (req, res) => {
 });
 
 // POST/CREATE logout event
-router.post('/logout', (req, res) => {
+router.post('/logout', withAuth, (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();

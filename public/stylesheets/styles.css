@@ -179,6 +179,10 @@ p {
     font-size: 60px;
 }
 
+.homepage-header img {
+    padding-bottom: 10px;
+}
+
 .home-button-section {
     justify-content: center;
     margin-top: 30px;
