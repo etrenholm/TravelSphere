@@ -17,7 +17,7 @@ async function tripInfoFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard/');
+        document.location.replace('/signup/');
       } else {
         alert(response.statusText);
       }

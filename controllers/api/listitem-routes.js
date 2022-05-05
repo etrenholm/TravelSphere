@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../../utils/auth');
 const { ListItem } = require('../../models');
 
 // GET all list items
@@ -13,7 +14,7 @@ router.get('/', (req, res) => {
 });
 
 // Post new list item
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     ListItem.create({
         item_text: req.body.item_text,
         trip_id: req.session.trip_id,
