@@ -4,6 +4,19 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const path = require('path');
 
+// ansi-colors
+const c = require('ansi-colors');
+
+c.theme({
+  danger: c.bold.magenta,
+  warning: c.bgYellow,
+  success: c.bold.green,
+  info: c.bold.cyan,
+  em: c.italic,
+  strong: c.bold,
+  underline: c.underline,
+});
+
 // connect PORT
 const app = express();
 const PORT = process.env.PORT || 3001;

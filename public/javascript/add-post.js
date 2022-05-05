@@ -5,7 +5,6 @@ async function addPostFormHandler(event) {
   const url = document.querySelector('input[name="itinerary-link"]').value;
   const post_content = document.querySelector('textarea[name="itinerary-notes"]').value;
 
-  console.log(title, url, post_content)
   if (title && post_content) {
     const response = await fetch(`/api/posts`, {
       method: 'POST',
