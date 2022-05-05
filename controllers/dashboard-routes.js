@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Trip, Post, Member, Comment, ListItem } = require('../models');
+const c = require('ansi-colors');
 
 router.get('/', (req, res) => {
     Trip.findOne({
@@ -50,6 +51,8 @@ router.get('/', (req, res) => {
 
 // GET create post page
 router.get('/create', (req, res) => {
+
+    console.log(c.success("worked"))
 
     // RENDER to create-post.handlebars
     res.render('create-post', {

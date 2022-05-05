@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const { Member, Post, Comment } = require('../../models');
+const c = require('ansi-colors');
 
 // GET all posts
 router.get('/', (req, res) => {
@@ -71,7 +72,7 @@ router.get('/:id', (req, res) => {
 
 // POST new post
 router.post('/', withAuth, (req, res) => {
-  console.log(req.body, req.session)
+  console.log(c.info(req.body, req.session))
   Post.create({
     title: req.body.title,
     url: req.body.url,
