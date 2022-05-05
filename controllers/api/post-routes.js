@@ -72,7 +72,9 @@ router.get('/:id', (req, res) => {
 
 // POST new post
 router.post('/', withAuth, (req, res) => {
+  
   console.log(c.info(req.body, req.session))
+
   Post.create({
     title: req.body.title,
     url: req.body.url,

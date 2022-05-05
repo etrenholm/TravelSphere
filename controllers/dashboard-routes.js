@@ -3,6 +3,7 @@ const { Trip, Post, Member, Comment, ListItem } = require('../models');
 const c = require('ansi-colors');
 
 router.get('/', (req, res) => {
+    console.log(c.info(req.session.trip_id))
     Trip.findOne({
         where: {
             id: req.session.trip_id
@@ -38,9 +39,10 @@ router.get('/', (req, res) => {
 
             // RENDER to dashboard.handlebars
             const tripInfo = tripData.get({ plain: true })
+    
             res.render('dashboard', {
                 tripInfo,
-                loggedIn: true
+                loggedIn: true,
             })
 
         })
@@ -94,9 +96,11 @@ router.get('/:id', (req, res) => {
         .then(postData => {
             if (postData) {
 
+                console.log(c.success("worked"))
+
                 // RENDER to view-post.handlebars
                 const posts = postData.get({ plain: true })
-                console.log(postData)
+
                 res.render('view-post', {
                     posts,
                     loggedIn: true
