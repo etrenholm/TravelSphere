@@ -6,6 +6,7 @@ router.get('/', (req, res) => {
     Trip.findAll({
         attributes: [
             'id',
+            'uuid',
             'location',
             'start_date',
             'end_date'
