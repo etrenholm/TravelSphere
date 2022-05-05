@@ -49,6 +49,10 @@ Member.hasMany(ListItem, {
 });
 
 // Post
+Post.belongsTo(Trip, {
+    foreignKey: 'trip_id'
+});
+
 Post.belongsTo(Member, {
     foreignKey: 'member_id'
 });

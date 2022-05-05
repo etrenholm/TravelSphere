@@ -70,6 +70,7 @@ router.get('/:id', (req, res) => {
 
 // POST new post
 router.post('/', (req, res) => {
+  console.log(req.body, req.session)
   Post.create({
       title: req.body.title,
       url: req.body.url,

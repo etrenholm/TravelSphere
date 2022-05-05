@@ -49,54 +49,54 @@ router.get('/', (req, res) => {
 });
 
 // GET a single post
-router.get('/:id', (req, res) => {
-    Post.findOne({
-        where: {
-            id: req.params.id
-        },
-        attributes: [
-            'id',
-            'title',
-            'url',
-            'post_content',
-        ],
-        include: [
-            {
-                model: Comment,
-                attributes: [
-                    'id',
-                    'comment_text',
-                    'member_id'
-                ],
-                include: {
-                    model: Member,
-                    attributes: ['username']
-                }
-            },
-            {
-                model: Member,
-                attributes: ['username']
-            }
-        ]
-    })
-    .then(postData => {
-        if (postData) {
+// router.get('/:id', (req, res) => {
+//     Post.findOne({
+//         where: {
+//             id: req.params.id
+//         },
+//         attributes: [
+//             'id',
+//             'title',
+//             'url',
+//             'post_content',
+//         ],
+//         include: [
+//             {
+//                 model: Comment,
+//                 attributes: [
+//                     'id',
+//                     'comment_text',
+//                     'member_id'
+//                 ],
+//                 include: {
+//                     model: Member,
+//                     attributes: ['username']
+//                 }
+//             },
+//             {
+//                 model: Member,
+//                 attributes: ['username']
+//             }
+//         ]
+//     })
+//     .then(postData => {
+//         if (postData) {
 
-        // RENDER to view-post.handlebars
-        const posts = postData.get({  plain: true })
-        console.log(postData)
-        res.render('view-post', {
-            posts,
-            loggedIn: true
-        })
-    } else {
-        res.status(404).end()
-    }
-    })
-    .catch((err) => {
-        res.status(500).json(err)
-    })
-});
+//         // RENDER to view-post.handlebars
+//         const posts = postData.get({  plain: true })
+//         console.log(postData)
+//         res.render('view-post', {
+//             posts,
+//             loggedIn: true
+//         })
+//     } else {
+//         res.status(404).end()
+//     }
+//     })
+//     .catch((err) => {
+//         res.status(500).json(err)
+//     })
+// });
 
 
 // GET create post page
