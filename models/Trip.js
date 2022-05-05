@@ -5,12 +5,6 @@ class Trip extends Model {}
 
 Trip.init(
     {
-        // id: {
-        //     type: DataTypes.UUID,
-        //     allowNull: false,
-        //     primaryKey: true,
-        //     defaultValue: DataTypes.UUIDV4
-        // },
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,

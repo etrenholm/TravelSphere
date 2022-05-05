@@ -1,5 +1,15 @@
 const router = require('express').Router();
 
+// GET home
+router.get('/', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/dashboard')
+        return;
+    }
+    // RENDER to homepage.handlebars
+    res.render('homepage')
+});
+
 // GET login
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {

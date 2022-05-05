@@ -6,12 +6,12 @@
                 <h2>Group Members</h2>
             </div>
             <div class="group-main">
-                <p>Erica</p>
-                <p>Josh</p>
-                <p>Ryan</p>
+                {{#each tripInfo.members}}
+                <p>{{username}}</p>
+                {{/each}}
             </div>
             <div class="group-id">
-                Group ID: {{id}}
+                Your Trip ID: {{tripInfo.id}}
             </div>
         </section>
 
@@ -22,11 +22,11 @@
         <section class="top-section">
             <div class="location">
                 <p class="blue-text">Your Trip to:</p>
-                <h3>{{location}}</h3>
+                <h3>{{tripInfo.location}}</h3>
             </div>
             <div class="dates">
                 <p class="blue-text">Travel Dates:</p> 
-                <h3>May 25 - June 1, 2022</h3>
+                <h3>{{tripInfo.start_date}} - {{tripInfo.end_date}}</h3>
             </div>
         </section>
 
@@ -37,20 +37,22 @@
                 <div class="itinerary-header">
                     <h2>Itinerary Ideas</h2>
                     <div class="plus">
-                        <img src="images/plus.svg" width="20px">
+                        <a href="/dashboard/create">
+                        <img src="/images/plus.svg" width="20px">
+                        </a>
                     </div>
                 </div>
 
                 <!-- itinerary main START -->
 
                 <div class="itinerary-main">
-
-                    {{#each posts as |post|}}
+                    {{#each tripInfo.posts}}
                     <div class="itinerary-item">
-                        {{> post-info post}}
+                        <h4><a href="/dashboard/{{id}}">{{title}}</a></h4>
+                        <p><a href="{{url}}">{{url}}</a></p>
+                        <p class="blue-text">{{comments.length}} comments</p>
                     </div>
                     {{/each}}
-
                 </div>   
             </section>
 
@@ -60,8 +62,8 @@
                     </div>
                     <div class="to-do-main">
                         <ul>
-                        {{#each listitems as |listitem|}}
-                            {{> list-info listitem}}
+                        {{#each tripInfo.listitems}}
+                            <li>{{item_text}}</li>
                         {{/each}}
                         </ul>
                     </div>
@@ -80,3 +82,5 @@
         </div>
     </div>
 </div>
+
+<script src="/javascript/add-list-item.js"></script>

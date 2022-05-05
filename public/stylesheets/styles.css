@@ -23,6 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 65px;
 }
 
 header h1 {
@@ -63,6 +64,15 @@ a:hover {
     color: #93b419;
 }
 
+h1 {
+    font-family: 'sofia-pro-condensed', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48px;
+    color: var(--white);
+    letter-spacing: .5px;
+    padding-bottom: 30px;
+    line-height: 1em;
+}
+
 h2 {
     font-family: 'sofia-pro-condensed', 'Arial Narrow', Arial, sans-serif;
     font-size: 22px;
@@ -82,6 +92,13 @@ h4 a {
     color: black;
 }
 
+h5 {    
+    font-size: 22px;
+    text-align: center;
+    color: var(--white);
+    padding-bottom: 10px;
+}
+
 p {
     line-height: 1.3em;
     padding: 10px 0px;
@@ -98,7 +115,7 @@ p {
 
 .container {
     margin: auto;
-    width: 1200px;
+    width: 1100px;
 } 
 
 .blue-text {
@@ -113,7 +130,6 @@ p {
     background-color: var(--gray);
     color: var(--white);
     padding: 30px;
-    height: 200px;
 }
 
 .group-header {
@@ -148,9 +164,28 @@ p {
     text-align: center;
 }
 
+/* Homepage */
+
+.homepage-section {
+    width: 50%;
+    margin-top: -90px;
+}
+
+.homepage-header {
+    background-color: var(--light-green);
+    padding: 50px 50px 70px 50px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 60px;
+}
+
+.home-button-section {
+    justify-content: center;
+    margin-top: 30px;
+    color: black;
+}
 
 /* Itinerary, To Do List, Signup, login, Trip Info */
-
 .login-header,
 .signup-header,
 .trip-info-header,
@@ -177,6 +212,8 @@ p {
 .signup-section,
 .trip-info-section,
 .itinerary-section,
+.itinerary-add-section,
+.itinerary-view-section,
 .to-do-section {
     border-radius: 5px;
     background-color: white;
@@ -184,9 +221,17 @@ p {
 
 .login-section,
 .signup-section,
-.trip-info-section {
+.trip-info-section,
+.itinerary-add-section,
+.itinerary-view-section {
     width: 50%;
-    margin-top: -80px;
+    margin-top: -60px;
+}
+
+.itinerary-view-section
+{
+    width: 90%;
+    margin-top: -60px;
 }
 
 .login-main,
@@ -200,10 +245,13 @@ p {
 }
 
 .login-item,
-.itinerary-item,
 .itinerary-add-comment,
 .comments {
     padding-bottom: 30px;
+}
+
+.itinerary-item {
+    padding-bottom: 20px;
 }
 
 ul li {
@@ -341,8 +389,20 @@ button:hover {
         width: 100%;
     }
 
+    .right-side {
+        width: 100%;
+    }
+
+    .itinerary-section {
+        width: 100%;
+    }
+
     .to-do-section {
         width: 100%;
+    }
+
+    .homepage-section {
+        width: 70%;
     }
 
 }

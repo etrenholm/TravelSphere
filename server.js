@@ -26,7 +26,7 @@ const sess = {
     store: new SequelizeStore({
       db: sequelize
     })
-  }
+}
 
 app.use(session(sess))
 
@@ -40,6 +40,6 @@ const routes = require('./controllers/');
 app.use(routes);
 
 // connection to db and server
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
 });

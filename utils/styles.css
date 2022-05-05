@@ -84,7 +84,7 @@ p {
 }
 
 .hero {
-    background-image: url('./images/Pine Forest at Sunrise.jpg');
+    background-image: url('/images/Pine Forest at Sunrise.jpg');
     background-size: cover;
     background-position: 50%;
     padding: 150px 0 40px 0;
@@ -173,16 +173,27 @@ p {
 .signup-section,
 .trip-info-section,
 .itinerary-section,
+.itinerary-add-section,
+.itinerary-view-section,
 .to-do-section {
     border-radius: 5px;
     background-color: white;
 }
 
+.homepage-section,
 .login-section,
 .signup-section,
-.trip-info-section {
+.trip-info-section,
+.itinerary-add-section,
+.itinerary-view-section {
     width: 50%;
-    margin-top: -80px;
+    margin-top: -60px;
+}
+
+.itinerary-view-section
+{
+    width: 90%;
+    margin-top: -60px;
 }
 
 .login-main,
