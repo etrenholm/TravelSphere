@@ -17,7 +17,13 @@ async function tripInfoFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/signup/');
+        const message = document.querySelector("#message")
+        const data = await response.json()
+        message.textContent = "Here is your trip id!" + data.id
+        document.querySelector('#location').value=""
+        document.querySelector('#start-date').value=""
+        document.querySelector('#end-date').value=""
+        // document.location.replace('/signup/');
       } else {
         alert(response.statusText);
       }
