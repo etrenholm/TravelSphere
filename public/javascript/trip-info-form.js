@@ -17,13 +17,15 @@ async function tripInfoFormHandler(event) {
       });
   
       if (response.ok) {
-        const message = document.querySelector("#message")
+
+        const message = document.querySelector(".trip-info-main")
         const data = await response.json()
-        message.textContent = "Here is your trip id!" + data.id
+        
+        message.innerHTML = "<h3>Your trip ID is: " + data.id + ".</h3> <p>Save this ID and use it to create an account. Share this ID with your friends to invite them into your new, private dashboard.</p>"
+
         document.querySelector('#location').value=""
         document.querySelector('#start-date').value=""
         document.querySelector('#end-date').value=""
-        // document.location.replace('/signup/');
       } else {
         alert(response.statusText);
       }
