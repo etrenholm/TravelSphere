@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class ListItem extends Model {}
+class ListItem extends Model { }
 
 ListItem.init(
     {
@@ -41,6 +41,6 @@ ListItem.init(
         underscored: true,
         modelName: 'listitem'
     }
-)
+);
 
 module.exports = ListItem;
