@@ -39,7 +39,7 @@ router.get('/', (req, res) => {
 
             // RENDER to dashboard.handlebars
             const tripInfo = tripData.get({ plain: true })
-    
+
             res.render('dashboard', {
                 tripInfo,
                 loggedIn: true,

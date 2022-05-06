@@ -32,12 +32,12 @@ router.get('/', (req, res) => {
             },
         ]
     })
-    .then((tripData) => {
-        res.json(tripData)
-    })
-    .catch((err) => {
-        res.status(500).json(err);
-    })
+        .then((tripData) => {
+            res.json(tripData)
+        })
+        .catch((err) => {
+            res.status(500).json(err);
+        })
 });
 
 // GET trip by id
@@ -67,12 +67,12 @@ router.get('/:id', (req, res) => {
             },
         ]
     })
-    .then((tripData) => {
-        res.json(tripData)
-    })
-    .catch((err) => {
-        res.status(500).json(err);
-    })
+        .then((tripData) => {
+            res.json(tripData)
+        })
+        .catch((err) => {
+            res.status(500).json(err);
+        })
 });
 
 // POST/CREATE new trip
@@ -82,10 +82,10 @@ router.post('/', (req, res) => {
         start_date: req.body.start_date,
         end_date: req.body.end_date
     })
-    .then(tripData => res.json(tripData))
-    .catch((err) => {
-        res.status(500).json(err);
-    })
+        .then(tripData => res.json(tripData))
+        .catch((err) => {
+            res.status(500).json(err);
+        })
 });
 
 module.exports = router;

@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Post extends Model {}
+class Post extends Model { }
 
 // Post = Itinerary Idea
 Post.init(
@@ -20,7 +20,7 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-              isURL: true
+                isURL: true
             }
         },
         post_content: {
@@ -31,16 +31,16 @@ Post.init(
             type: DataTypes.INTEGER,
             allowNull: true,
             references: {
-              model: 'trip',
-              key: 'id'
+                model: 'trip',
+                key: 'id'
             }
         },
         member_id: {
             type: DataTypes.INTEGER,
             allowNull: true,
             references: {
-              model: 'member',
-              key: 'id'
+                model: 'member',
+                key: 'id'
             }
         }
     },
@@ -51,6 +51,6 @@ Post.init(
         underscored: true,
         modelName: 'post'
     }
-)
+);
 
 module.exports = Post;

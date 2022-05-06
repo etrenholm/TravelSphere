@@ -124,46 +124,6 @@ p {
     color: var(--light-blue);
 }
 
-/* Group Sidebar */
-
-.group-main {
-    background-color: var(--gray);
-    color: var(--white);
-    padding: 30px;
-}
-
-.group-header {
-    padding: 20px 20px 0px 20px;
-    background-color: var(--gray);
-    border-radius: 5px 5px 0px 0px;
-}
-
-.group-id {
-    background-color: #384243;
-    padding: 20px;
-    color: var(--white);
-    font-family: 'sofia-pro-condensed', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    border-radius: 0px 0px 5px 5px;
-}
-
-
-/* Top Section */
-
-.top-section {
-    background-color: var(--white);
-    padding: 30px 60px 40px 40px;
-    width: 100%;
-    display: flex;
-    border-radius: 5px;
-}
-
-.location,
-.dates {
-    flex: 1;
-    text-align: center;
-}
-
 /* Homepage */
 
 .homepage-section {
@@ -189,7 +149,48 @@ p {
     color: black;
 }
 
-/* Itinerary, To Do List, Signup, login, Trip Info */
+/* Group Sidebar */
+
+.group-main {
+    background-color: var(--gray);
+    color: var(--white);
+    padding: 30px;
+}
+
+.group-header {
+    padding: 20px 20px 0px 20px;
+    background-color: var(--gray);
+    border-radius: 5px 5px 0px 0px;
+}
+
+.group-id {
+    background-color: #384243;
+    padding: 20px;
+    color: var(--white);
+    font-family: 'sofia-pro-condensed', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 0px 0px 5px 5px;
+}
+
+
+/* Trip Info Section */
+
+.top-section {
+    background-color: var(--white);
+    padding: 30px 60px 40px 40px;
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+}
+
+.location,
+.dates {
+    flex: 1;
+    text-align: center;
+}
+
+/* Itinerary, To Do List, Signup, Login */
+
 .login-header,
 .signup-header,
 .trip-info-header,
@@ -266,6 +267,7 @@ ul li {
 }
 
 /* Flex Styles */
+
 .flex-main,
 .flex-sub {
     display: flex;
@@ -305,6 +307,7 @@ ul li {
 }
 
 /* Form Styles */
+
 .itinerary-item h4 {
     padding-bottom: 10px;
 }
@@ -321,11 +324,8 @@ select {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#radio-button {
-    width: 5%;
-}
-
 /* Button Styles */
+
 button {
     background-color: var(--light-blue);
     padding: 10px 20px;
@@ -353,6 +353,8 @@ button:hover {
     padding-left: 10px;
     font-weight: normal;
 }
+
+/* Responsive Styles */
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 

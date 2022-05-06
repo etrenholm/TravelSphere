@@ -66,11 +66,11 @@ Post.hasMany(Comment, {
 Comment.belongsTo(Trip, {
     foreignKey: 'member_id',
 });
-  
+
 Comment.belongsTo(Member, {
     foreignKey: 'member_id',
 });
-  
+
 Comment.belongsTo(Post, {
     foreignKey: 'post_id'
 });
@@ -86,4 +86,4 @@ module.exports = {
     Post,
     Comment,
     ListItem
-}
+};
