@@ -33,13 +33,13 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // start session
 const sess = {
-    secret: 'Secret',
-    cookie: {},
-    resave: false,
-    saveUninitialized: true,
-    store: new SequelizeStore({
-      db: sequelize
-    })
+  secret: 'Secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
 }
 
 app.use(session(sess))
@@ -55,5 +55,5 @@ app.use(routes);
 
 // connection to db and server
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Now listening'));
 });
