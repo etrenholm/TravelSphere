@@ -14,7 +14,7 @@
 * [Contributers](#contributers)
 
 ## User Story
-
+As some of us are traveling we wated an application where we can plann trips with our friends and family but have all the information in one place.
 
 ## Description
 Our motivation for this project was to use all the skills we've learned in the past 2 months to make a search application where we can set to-do list for members ina group. As travellers this project made sense to us.
@@ -22,7 +22,7 @@ We built this project for groups who loves to travel, and wants a quick way to f
 We learned so much during this project as a team, we found out ways to make our hectic schedules work together. We also learned a lot about handlebars, insomnia and how it operates.
 
 ## Motivation
-
+We wanted to create an application that is similar to the tech blog projects we did in the modules. Also some of us have trips coming up so we had that as a huge insperations and motivation to do presue with this idea.
 	
 ## Technologies
 Project was created using:
@@ -72,7 +72,10 @@ To use our website, simply provide a City in the input, and click search. Upon s
 
 
 ## Credits
-
+Adobe Typekit: https://use.typekit.net/qsc3hpo.css
+Sequelize: https://sequelize.org/
+Handlebars: https://handlebarsjs.com/
+npm: https://www.npmjs.com/
 
 ## Results
 * Heroku URL:
@@ -83,8 +86,9 @@ To use our website, simply provide a City in the input, and click search. Upon s
 
 
 ## Contributers
-* Joshua: https://github.com/JoshuaPDLV
+* Joshua Puente De La Vega: https://github.com/JoshuaPDLV
 * Ryan Zubayer: https://github.com/ryanzubayer
 * Erica Trenholm: https://github.com/etrenholm
+* Craig Maguire: https://github.com/CrMaguire
 
 ### ©️ May 2022
