@@ -63,7 +63,6 @@ To use our website, simply provide a City in the input, and click search. Upon s
 
 
 ## Directions for Future Development
-* Enhance high score organization and add bronze, silver, gold medal functionality
 * Add the ability to edit and delete items, posts, and comments
 * Add the ability to designate and filter the itinerary items into categories, such as food/drink, attraction, tour, etc.
 * Add calendar functionality to build an itinerary
