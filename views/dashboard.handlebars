@@ -1,0 +1,86 @@
+<div class="flex-main">
+    <div class="left-side">
+
+        <section class="group-section">
+            <div class="group-header">
+                <h2>Group Members</h2>
+            </div>
+            <div class="group-main">
+                {{#each tripInfo.members}}
+                <p>{{username}}</p>
+                {{/each}}
+            </div>
+            <div class="group-id">
+                Your Trip ID: {{tripInfo.id}}
+            </div>
+        </section>
+
+    </div>
+
+    <div class="right-side">
+
+        <section class="top-section">
+            <div class="location">
+                <p class="blue-text">Your Trip to:</p>
+                <h3>{{tripInfo.location}}</h3>
+            </div>
+            <div class="dates">
+                <p class="blue-text">Travel Dates:</p> 
+                <h3>{{tripInfo.start_date}} - {{tripInfo.end_date}}</h3>
+            </div>
+        </section>
+
+        <div class="flex-sub">
+
+            <section class="itinerary-section"> 
+
+                <div class="itinerary-header">
+                    <h2>Itinerary Ideas</h2>
+                    <div class="plus">
+                        <a href="/dashboard/create">
+                        <img src="/images/plus.svg" width="20px">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- itinerary main START -->
+
+                <div class="itinerary-main">
+                    {{#each tripInfo.posts}}
+                    <div class="itinerary-item">
+                        <h4><a href="/dashboard/{{id}}">{{title}}</a></h4>
+                        <p><a href="{{url}}">{{url}}</a></p>
+                        <p><a href="/dashboard/{{id}}" class="blue-text">{{comments.length}} {{format_plural "comment" comments.length}}</a></p>
+                    </div>
+                    {{/each}}
+                </div>   
+            </section>
+
+            <section class="to-do-section">
+                    <div class="to-do-header">
+                        <h2>To-Do List</h2>
+                    </div>
+                    <div class="to-do-main">
+                        <ul>
+                        {{#each tripInfo.listitems}}
+                            <li>{{item_text}}</li>
+                        {{/each}}
+                        </ul>
+                    </div>
+
+                <div class="to-do-add-header">
+                    <h2>Add an Item:</h2>
+                </div>
+                <div class="to-do-add-main">
+                    <form class="to-do">
+                        <input type="text" id="to-do-item" name="to-do-item">
+                        <button id="to-do-add-button" class="btn">Post</button>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</div>
+
+<script src="/javascript/add-list-item.js"></script>

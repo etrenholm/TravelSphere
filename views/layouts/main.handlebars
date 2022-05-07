@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+        <link rel="stylesheet" href="https://use.typekit.net/qsc3hpo.css">
+        <title>TriviaSphere</title>
+        <link rel="icon" type="image/x-icon" href="/images/pindrop-green.svg">
+    </head>
+
+    <header>
+        {{#if loggedIn}}
+        <a href="/dashboard"><img src="/images/pindrop.png" width="20px"></a>
+        {{else}}
+        <a href="/"><img src="/images/pindrop.png" width="20px"></a>
+        {{/if}}
+
+        <nav>
+            {{#if loggedIn}}
+            <a href="/dashboard" class="nav-item">Dashboard</a>
+            <button id="logout" class="nav-item logout">Logout</button>
+            {{else}}
+            <a href="/login" class="nav-item">Login</a>
+            <a href="/signup" class="nav-item">Sign up</a>
+            <a href="/trip-info" class="nav-item">Create a Trip</a>
+            {{/if}}
+        </nav>
+    </header>
+
+    <section class="hero"></section>
+
+    <body>
+        <main class="container">
+            {{{ body }}}
+        </main>
+
+        {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+        {{/if}}
+
+    </body>
+</html>

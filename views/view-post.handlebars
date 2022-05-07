@@ -1,0 +1,32 @@
+<div class="flex-sub">
+
+    <section class="itinerary-view-section">
+
+        <div class="itinerary-header">
+            <h2>Itinerary Idea</h2>
+        </div>
+
+        <div class="itinerary-main">
+            <div class="itinerary-item">
+                <h4>{{posts.title}}</h4>
+                <p><a href="{{posts.url}}">{{posts.url}}</a></p>
+                <p>{{posts.post_content}}</p>
+            </div>
+        </div>
+
+        {{> comments posts.comments}}
+
+        <div class="itinerary-add-comment-header">
+            <h2>Add a Comment:</h2>
+        </div>
+        <div class="itinerary-add-comment-main">
+            <form class="comment-form">
+                <textarea type="text" id="itinerary-add-comment" name="itinerary-add-comment"></textarea>
+                <button id="itinerary-add-comment-button" class="btn">Post</button>
+            </form>
+        </div>
+
+    </section>
+</div>
+
+<script src="/javascript/comment.js"></script>
