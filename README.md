@@ -1,6 +1,5 @@
 # TravelSphere
 
-
 ## Table of contents
 * [User Story](#user-story)
 * [Description](#description)
@@ -52,7 +51,7 @@ This project was created using:
 * Dotenv
 * Mysql2
 * Bcrypt
-* Adobe Typekit
+* Adobe Fonts (Typekit)
 * ansi-colors
 
 ## Challenges
@@ -128,7 +127,7 @@ npm run seed
 ``` 
 
 ## Credits
-* Adobe Typekit: https://use.typekit.net/qsc3hpo.css
+* Adobe Fonts/Typekit: https://fonts.adobe.com/
 * Sequelize: https://sequelize.org/
 * Handlebars: https://handlebarsjs.com/
 * npm: https://www.npmjs.com/
